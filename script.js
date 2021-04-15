@@ -149,3 +149,4 @@ formBtn3.addEventListener("click", function(e) {
     }, 1000)
 }
 
+window.open('popup.html', '', 'resizable=no, location=no, width=200, height=100, menubar=no, status=no, scrollbars=no, menubar=no')
