@@ -1,0 +1,98 @@
+@import url("https://drive.google.com/file/d/1H9mUD3r-63xehEIbZIiEwJkFvGnMSk_y/view?usp=sharing");
+@font-face {
+  font-family: Helvetica;
+  src: url "https://drive.google.com/file/d/1H9mUD3r-63xehEIbZIiEwJkFvGnMSk_y/view?usp=sharing";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  background: #2f3542;
+  background-image: url(./assets/img/pexels-energepiccom-313691.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+body h1 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+body h1 span, body h1 i {
+  color: #41ead4;
+}
+
+body h3 {
+  color: #41ead4;
+  font-size: 1.5rem;
+}
+
+body .container .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 3rem auto 3rem;
+  width: 500px;
+}
+
+body .container .choices button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 45%;
+          flex: 1 0 45%;
+  width: 200px;
+  height: 80px;
+  cursor: pointer;
+  border: none;
+  margin: .4rem;
+  outline: none;
+  background: #dfe4ea;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 600;
+}
+
+body .container .choices button:hover {
+  background: #41ead4;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .container .choices button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+body .container .choices button p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+body #progress {
+  font-size: 1.3rem;
+  color: #41ead4;
+}
+/*# sourceMappingURL=style.css.map */

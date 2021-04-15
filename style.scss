@@ -1,0 +1,77 @@
+@font-face {
+    font-family:Helvetica;
+    src: url ("https://drive.google.com/file/d/1H9mUD3r-63xehEIbZIiEwJkFvGnMSk_y/view?usp=sharing");
+}
+@import url("https://drive.google.com/file/d/1H9mUD3r-63xehEIbZIiEwJkFvGnMSk_y/view?usp=sharing");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    background: #2f3542;
+    background-image: url(./assets/img/pexels-energepiccom-313691.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+
+  h1 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+
+    span, i {
+      color: #41ead4;
+    }
+  }
+  h3 {
+    color: #41ead4;
+    font-size: 1.5rem;
+  }
+  .container {
+    .choices {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3rem auto 3rem;
+      width: 500px;
+
+      button {
+        flex: 1 0 45%;
+        width: 200px;
+        height: 80px;
+        cursor: pointer;
+        border: none;
+        margin: .4rem;
+        outline: none;
+        background: #dfe4ea;
+        user-select: none;
+        font-weight: 600;
+
+        &:hover {
+          background: #41ead4;
+          transition: .5s;
+        }
+        &:active {
+          transform: scale(.9);
+          transition: transform .1s;
+        }
+      
+        p {
+          font-size: 1.3rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  #progress {
+    font-size: 1.3rem;
+    color: #41ead4;
+  }
+}
+
