@@ -18,33 +18,86 @@
         <div id="quiz">
             <h1><span>Questionnaire de connaissances numériques</span> <i class="far fa-question-circle"></i></h1>
     
-            <h2 id="question"></h2>
-            
-            <h3 id="score"></h3>
-    
-            
-                <div class="choices">
-                    <button id="guess0" class="btn">        
-                    <p id="choice0"></p>
-                    </button>
+            <!--form START-->
+            <main>
+                <div class="stepper">
+                    <div class="step--1 step-active">Informations personnel</div><!--mise en forme-->
+                    <div class="step--2">Information d'entreprise</div><!--info personnel-->
+                    <!--mise en forme-->
 
-    
-                    <button id="guess1" class="btn">
-                    <p id="choice1"></p>
-                    </button>
+                    <!--info personnel-->
+                    <form class="form">
+                        <div class="form--header-container">
+                            <div class="row center">
+                                <div class="col-md-12">
+                                        <h1 class="form--header-title">
+                                            Informations personnelles
+                                        </h1>
                     
-                    <button id="guess2" class="btn">
-                    <p id="choice2"></p>
-                    </button>
+                                        <p class="form--header-text">
+                                            Dites-nous en plus sur vous.
+                                        </p>
+                                </div>
+                                <input type="text" placeholder="Nom" />
+                                <input type="text" placeholder="Prénom" />
+                                <input type="text" placeholder="Adresse Mail" />
+                                <button class="form__btn" id="btn-1">Suivant</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!--info société-->
+                    <form class="form">
+                        <div class="form--header-container">
+                            <div class="row center">
+                                <div class="col-md-12">
+                                        <h1 class="form--header-title">
+                                            Information d'entreprise
+                                        </h1>
                     
-                    <button id="guess3" class="btn">
-                    <p id="choice3"></p>
-                    </button>
+                                        <p class="form--header-text">
+                                            Dites-nous en plus sur votre entreprise.
+                                        </p>
+                                </div>
+                                <input type="text" placeholder="Nom de la societé" />
+                                <input type="text" placeholder="Fonction" />
+                                <input type="text" placeholder="Emplacement" />
+                                <button class="form__btn" id="btn-2-prev">Précédent</button>
+                                <button class="form__btn" id="btn-2-next">Suivant</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </main>
+                <!--form END-->
+            <section>    
+            
+                <h2 id="question"></h2>
+                
+                <h3 id="score"></h3>
 
-    
-          <p id="progress"></p>
-    
+                    <!--questions section-->
+                    <div class="choices">
+                        <button id="guess0" class="btn">        
+                        <p id="choice0"></p>
+                        </button>
+
+        
+                        <button id="guess1" class="btn">
+                        <p id="choice1"></p>
+                        </button>
+                        
+                        <button id="guess2" class="btn">
+                        <p id="choice2"></p>
+                        </button>
+                        
+                        <button id="guess3" class="btn">
+                        <p id="choice3"></p>
+                        </button>
+                    </div>
+
+        
+            <p id="progress"></p>
+            </section>        
         </div>
       </div>
 </body>
