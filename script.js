@@ -123,10 +123,10 @@ formBtn3.addEventListener("click", function(e) {
     document.querySelector(`.step--2`).classList.add("step-active")
     formBtn3.parentElement.style.display = "none"
     document.querySelector(".form--message").innerHTML = `
-    <h1 class="form--message-text">Super vous avez fini le questionnaire!</h1>
+    <h1 class="form--message-text">Vous avez fini le questionnaire!</h1>
     `
     e.preventDefault()
-})
+});
 
     const gotoNextForm = (prev, next, stepPrev, stepNext) => {
     // Get form through the button
@@ -149,4 +149,19 @@ formBtn3.addEventListener("click", function(e) {
     }, 1000)
 }
 
-window.open('popup.html', '', 'resizable=no, location=no, width=200, height=100, menubar=no, status=no, scrollbars=no, menubar=no')
+// POPUP 
+var btnPopup = document.getElementById('btnPopup');
+var overlay = document.getElementById('overlay');
+var btnClose = document.getElementById('btnClose');
+
+btnPopup.addEventListener('click',openModal);
+
+btnClose.addEventListener('click',closePopup);
+
+function openModal() {
+  overlay.style.display='block';
+}
+
+function closePopup() {
+overlay.style.display='none';
+};

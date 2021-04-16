@@ -9,14 +9,15 @@
   box-sizing: border-box;
   text-align: center;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    min-height: 100vh;
-    background: #2f3542;
-    color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  background: #2f3542;
+  color: #ffffff;
 
   h1 {
     margin-bottom: 3rem;
@@ -83,6 +84,7 @@ body {
     //border-radius: 1rem;
     overflow: hidden;
   }
+
   .form--header-container {
     background: linear-gradient(to right, #000000, #41ead4);
     color: #fff;
@@ -111,7 +113,6 @@ body {
     border: 1px solid #bdbdbb;
   }
 
-
   .stepper {
     width: 20rem;
     display: flex;
@@ -130,10 +131,12 @@ body {
     color: #2f3542;
     text-align: center;
   }
+
   .step--1,
   .step--2 {
     border-right: 1px solid #41ead4;
   }
+
   main {
     height: 10vh;
     width: 100%;
@@ -152,11 +155,11 @@ body {
     padding: 0.5rem 0.7rem;
     width: 7rem;
     margin: 1rem auto;
-    border-radius: 0.9rem;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
   }
+
   .form--message-text {
     width: 25rem;
     background: #fff;
@@ -166,16 +169,18 @@ body {
     font-size: 1.4rem;
     box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
     animation: fadeIn 0.8s;
-    border-radius: 1rem;
+
   }
 
   .form-active {
     z-index: 1000;
     display: block;
   }
+
   .form-active-animate {
     animation: moveRight 1s;
   }
+
   .form-inactive {
     display: block;
     animation: moveLeft 1s;
@@ -187,6 +192,45 @@ body {
     border: 1px solid #41ead4;
   }
 
+  //popup
+
+  .overlay {
+    position: fixed;
+    left: 0px;
+    top:0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    display:none;
+  }
+
+  .btnPopup{
+    background: #41ead4;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    width: 7rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btnPopup:hover{
+    background-color: rgb(255, 255, 255);
+    color:#41ead4;
+  }
+    
+  .btnClose {
+    float: right;
+    font-size:16pt;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+  }
+
+  //
   @keyframes moveRight {
     0% {
       transform: translateX(-27rem) scale(0.9);
