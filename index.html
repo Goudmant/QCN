@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
     <link rel="stylesheet" href="./style.css">
 
 
@@ -20,7 +19,7 @@
             
             <section>    
             
-                <h2 id="question"></h2>
+                <h4 id="question"></h4>
                 
                 <h3 id="score"></h3>
 
@@ -49,59 +48,80 @@
             </section>        
         </div>
     </div>
-    <!--POPUP INFORAMTION PERSONNEL-->
-    <button id="btnPopup" class="btnPopup">Allez plus loin</button>
-    <div id="overlay" class="overlay">
-        <div id="popup" class="popup">
-            <!--<div class="stepper">
-                <div class="step--1 step-active">Informations personnel</div>
-                <div class="step--2">Information d'entreprise</div>-->
-                <div><span id="btnClose" class="btnClose">&times;</span></div>
-                <!--info personnel-->
-                <form class="form">
-                    <div class="form--header-container">
-                        <div class="row center">
-                            <div class="col-md-12">
-                                <h1 class="form--header-title">
-                                    Informations personnelles
-                                </h1>
-                                
-                                <p class="form--header-text">
-                                    Dites-nous en plus sur vous.
-                                </p>
-                            </div>
-                            <input type="text" placeholder="Nom" />
-                            <input type="text" placeholder="Prénom" />
-                            <input type="text" placeholder="Adresse Mail" />
-                            <button class="form__btn" id="btn-1">Suivant</button>
-                        </div>
-                    </div>
-                </form>
-                       <!--info société-->
-                <form class="form">
-                    <div class="form--header-container">
-                        <div class="row center">
-                            <div class="col-md-12">
-                                <h1 class="form--header-title">
-                                    Information d'entreprise
-                                </h1>
-                            
-                                <p class="form--header-text">
-                                    Dites-nous en plus sur votre entreprise.
-                                </p>
-                            </div>
-                            <input type="text" placeholder="Nom de la societé" />
-                            <input type="text" placeholder="Fonction" />
-                            <input type="text" placeholder="Emplacement" />
-                            <button class="form__btn" id="btn-2-prev">Précédent</button>
-                            <button class="form__btn" id="btn-2-next">Suivant</button>
-                        </div>
-                    </div>
-                </form>
+    <!--POPUP INFORMATION PERSONNEL-->
+    <button class="button" data-modal="modalOne">Contacter nous</button>
+    <!--<button class="button" data-modal="modalTwo">Information d'entreprise</button>-->
+    <div id="modalOne" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <form action="/">
+            <h2>Informations personnelles</h2>
+            <p>
+                Dites-nous en plus sur vous.
+            </p>
+            <div>
+              <input class="fname" type="text" name="name" placeholder="Nom">
+              <input type="text" name="name" placeholder="Prénom">
+              <input type="text" name="name" placeholder="Numéro de téléphone">
+              <input type="text" name="name" placeholder="Adresse Mail">
             </div>
+            <span>Message</span>
+            <div>
+              <textarea rows="4"></textarea>
+            </div>
+            <button type="submit" href="modalTwo" id="btn-next"  action="modalTwo">Suivant</button>
+          </form>
         </div>
-    </div>     
-    
-    <script src="./script.js"defer></script>
+      </div>
+    </div>
+    </div>
+    <div id="modalTwo" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <span class="close">&times;</span>
+          <form action="/">
+            <h2>Information d'entreprise</h2>
+            <p>
+                Dites-nous en plus sur votre entreprise.
+            </p>
+            <div>
+              <input class="fname" type="text" name="name" placeholder="Nom de la société">
+              <input type="text" name="name" placeholder="Fonction">
+              <input type="text" name="name" placeholder="Emplacement">
+            </div>
+            <span>Message</span>
+            <div>
+              <textarea rows="4"></textarea>
+            </div>
+            <button type="submit" href="/" id="btn-Envoyer">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function(btn){
+        btn.onclick = function() {
+          var modal = btn.getAttribute('data-modal');
+          document.getElementById(modal).style.display = "block";
+        }
+      });
+      
+      var closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function(btn){
+        btn.onclick = function() {
+          var modal = btn.closest('.modal');
+          modal.style.display = "none";
+        }
+      });
+      
+      window.onclick = function(event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      }
+    </script>
+    <script type="text/javascript" src="./script.js" charset="utf-8" defer></script>
 </body>
 </html>
